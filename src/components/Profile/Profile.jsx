@@ -1,38 +1,38 @@
-const Profile = ({
+import clsx from "clsx";
+import css from '../Profile/Profile.module.css';
+
+export default function Profile({
   name,
   tag,
   location,
   image,
   stats: { followers, views, likes },
-}) => {
+}) {
   return (
     <>
-      <div>
+      <div className={css.card}>
         <div>
-          <img src={image} alt="User avatar" />
-          <p>{name}</p>
-          <p>{tag}</p>
-          <p>{location}</p>
+          <img className={css.image} src={image} alt="User avatar" />
+          <p className={css.name}>{name}</p>
+          <p className={css.city}>{tag}</p>
+          <p className={css.country}>{location}</p>
         </div>
 
-        <ul>
-          <li>
-            <span>Followers</span>
-            <span>{followers}</span>
+        <ul className={css.list}>
+          <li className={css.listItem}>
+            <span className={css.title}>Followers</span>
+            <span className={css.desc}>{followers}</span>
           </li>
-          <li>
-            <span>Views</span>
-            <span>{views}</span>
+          <li className={css.listItem}>
+            <span className={css.title}>Views</span>
+            <span className={css.desc}>{views}</span>
           </li>
-          <li>
-            <span>Likes</span>
-            <span>{likes}</span>
+          <li className={css.listItem}>
+            <span className={css.title}>Likes</span>
+            <span className={css.desc}>{likes}</span>
           </li>
         </ul>
-      </div>
-      ;
+      </div>;
     </>
   );
-};
-
-export default Profile;
+}
