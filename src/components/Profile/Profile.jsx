@@ -12,7 +12,7 @@ export default function Profile({
     <>
       <div className={css.card}>
         <div>
-          <img className={css.image} src={image} alt="User avatar" />
+          <img className={css.avatar} src={image} alt="User avatar" />
           <p className={css.username}>{name}</p>
           <p className={css.city}>{tag}</p>
           <p className={css.country}>{location}</p>
