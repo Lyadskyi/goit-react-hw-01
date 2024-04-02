@@ -13,8 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul {
-  list-style-type: none;
+ul,
+ol {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 a {

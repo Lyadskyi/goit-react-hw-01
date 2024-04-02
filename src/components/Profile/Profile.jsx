@@ -1,4 +1,4 @@
-import clsx from "clsx";
+// import clsx from "clsx";
 import css from '../Profile/Profile.module.css';
 
 export default function Profile({
@@ -13,7 +13,7 @@ export default function Profile({
       <div className={css.card}>
         <div>
           <img className={css.image} src={image} alt="User avatar" />
-          <p className={css.name}>{name}</p>
+          <p className={css.username}>{name}</p>
           <p className={css.city}>{tag}</p>
           <p className={css.country}>{location}</p>
         </div>
@@ -32,7 +32,7 @@ export default function Profile({
             <span className={css.desc}>{likes}</span>
           </li>
         </ul>
-      </div>;
+      </div>
     </>
   );
 }
